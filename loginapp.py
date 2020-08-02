@@ -7,7 +7,7 @@ import time
 import pandas as pd
 from webcam_image_capture import capture
 
-path = '/Users/hk/Desktop/openCV/BasicImages'
+path = '/Users/hk/Desktop/FaceID_Login_openCV/BasicImages'
 images = []
 classNames = []
 myList = os.listdir(path)
@@ -33,7 +33,7 @@ def findEncodings(images):
 
 
 def markAttendance(name):
-    df = pd.read_csv('/Users/hk/Desktop/openCV/attendance.csv')
+    df = pd.read_csv('/Users/hk/Desktop/FaceID_Login_openCV/Users.csv')
     # print(list(df.Name))
     if name in list(df.Name):
         print("Login")
@@ -42,7 +42,7 @@ def markAttendance(name):
         n = str(input("Enter your name:"))
         capture(n)
         df.loc[len(df)] = [n] #;print(df)
-        df.to_csv(r'/Users/hk/Desktop/openCV/attendance.csv', index=False)
+        df.to_csv(r'/Users/hk/Desktop/FaceID_Login_openCV/Users.csv', index=False)
 
 
 encodeListKnown = findEncodings(images)
