@@ -1,9 +1,12 @@
 import cv2
+import os
 
 def capture(name):
 
     key = cv2.waitKey(1)
     webcam = cv2.VideoCapture(0)
+
+    path = '/Users/hk/Desktop/FaceID_Login_openCV/Images'
 
     while True:
         try:
@@ -13,10 +16,10 @@ def capture(name):
             cv2.imshow("Capturing", frame)
             key = cv2.waitKey(1)
 
-            cv2.imwrite(filename=name + '.jpg', img=frame)
+            cv2.imwrite(os.path.join(path, name + '.jpg'), img=frame)
             webcam.release()
-            img_new = cv2.imread(name + '.jpg', cv2.IMREAD_GRAYSCALE)
-            img_new = cv2.imshow("Captured Image", img_new)
+            #img_new = cv2.imread(name + '.jpg', cv2.IMREAD_GRAYSCALE)
+            #img_new = cv2.imshow("Captured Image", img_new)
             cv2.waitKey(1650)
             cv2.destroyAllWindows()
             print("Image saved!")

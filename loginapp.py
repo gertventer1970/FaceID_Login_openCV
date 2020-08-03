@@ -7,7 +7,7 @@ import time
 import pandas as pd
 from webcam_image_capture import capture
 
-path = '/Users/hk/Desktop/FaceID_Login_openCV/BasicImages'
+path = '/Users/hk/Desktop/FaceID_Login_openCV/Images'
 images = []
 classNames = []
 myList = os.listdir(path)
