@@ -36,7 +36,7 @@ def markAttendance(name):
     df = pd.read_csv('/Users/hk/Desktop/FaceID_Login_openCV/Users.csv')
     # print(list(df.Name))
     if name in list(df.Name):
-        print("Login")
+        print("Welcome",name)
     elif name == "Unknown":
         print("Please sign up")
         n = str(input("Enter your name:"))
