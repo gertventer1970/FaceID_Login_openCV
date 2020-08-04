@@ -1,5 +1,9 @@
 # FaceID login System using openCV
 
+### References:
+- [Machine Learning is Fun! part 4: Modern Face Recognition with Deep Learning](https://medium.com/@ageitgey/machine-learning-is-fun-part-4-modern-face-recognition-with-deep-learning-c3cffc121d78) by Adam Geitgey
+- [FACE RECOGNITION + ATTENDANCE PROJECT | OpenCV Python (2020)](https://www.youtube.com/watch?v=sz25xxF_AVE)
+
 ## To execute, run following command in terminal
 ``` python loginapp.py ```
 
